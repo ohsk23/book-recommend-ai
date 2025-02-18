@@ -40,6 +40,7 @@ if book_name:
             with col1:
                 st.subheader("📊 분류 결과")
                 st.write(f"**입력하신 책**: {result_dict['book']}")
+                st.write(f"**저자**: {result_dict['author']}")
                 st.write(f"**분류 레벨**: {result_dict['level']}")
                 st.write("**추천 이유**:", result_dict['explanation'])
             
