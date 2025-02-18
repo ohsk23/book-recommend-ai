@@ -31,6 +31,7 @@ class SheetsManager:
         if not self.sheet.get_all_values():
             self.sheet.append_row([
                 "책 제목",
+                "저자",
                 "분류 레벨",
                 "추천 도서",
                 "분류 및 추천 이유",
@@ -42,6 +43,7 @@ class SheetsManager:
         book_data = json.loads(data)
         self.sheet.append_row([
             book_data["book"],
+            book_data["author"],
             book_data["level"],
             ", ".join(book_data["recommendations"]),
             book_data["explanation"],
