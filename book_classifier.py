@@ -1,10 +1,8 @@
 import os
 from openai import OpenAI
-from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["openai"]["api_key"])
 
 def classify_book(user_input: str) -> dict:
     prompt = f"""당신은 책 추천 전문가입니다.
