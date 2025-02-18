@@ -1,0 +1,7 @@
+book-recommender/
+├── app.py
+├── book_classifier.py
+├── sheets_manager.py
+├── requirements.txt
+├── .env
+└── credentials.json 
